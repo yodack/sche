@@ -14,9 +14,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'i18n_generators'
+end
+
 group :test do
 end
 
 group :development do
+  gem 'thin'
 end
 
