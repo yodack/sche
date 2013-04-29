@@ -11,12 +11,41 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429060900) do
+ActiveRecord::Schema.define(:version => 20130429065422) do
+
+  create_table "board_whens", :force => true do |t|
+    t.integer  "board_id"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "boards", :force => true do |t|
     t.string   "name"
     t.string   "what"
     t.string   "where"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "calendars", :force => true do |t|
+    t.date     "date"
+    t.boolean  "holiday"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "schedules", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "board_when_id"
+    t.boolean  "free"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.integer  "board_id"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

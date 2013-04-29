@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Board:</b>
+  <%= @board_when.board %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @board_when.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_board_when_path(@board_when) %> |
+<%= link_to 'Back', board_whens_path %>

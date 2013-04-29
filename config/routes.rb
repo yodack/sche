@@ -1,4 +1,16 @@
 Sche::Application.routes.draw do
+  resources :schedules
+
+
+  resources :users
+
+
+  resources :calendars
+
+
+  resources :board_whens
+
+
   resources :boards
 
 
