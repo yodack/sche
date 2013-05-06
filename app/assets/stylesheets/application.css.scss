@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+
+$navbarLinkColor:            #c3c3c3;
+$navbarLinkColorHover:       #fff;
+$navbarBackground:           #2c2c2c;
+$navbarBackgroundHighlight:  #2c2c2c;
+$navbarLinkBackgroundActive: #ebebeb;
+
+$gridColumns:                24;
+$gridColumnWidth:            40px;
+$gridGutterWidth:            10px;
+$gridRowWidth:               ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+@import "bootstrap";
+
