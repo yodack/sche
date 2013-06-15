@@ -1,3 +1,5 @@
+<%- content_for :body_id, 'schedules-index' -%>
+
 <h1>Listing schedules</h1>
 
 <table>
@@ -12,8 +14,8 @@
 
 <% @schedules.each do |schedule| %>
   <tr>
-    <td><%= schedule.user %></td>
-    <td><%= schedule.board_when %></td>
+    <td><%= schedule.user_id %></td>
+    <td><%= schedule.board_when_id %></td>
     <td><%= schedule.free %></td>
     <td><%= link_to 'Show', schedule %></td>
     <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
@@ -23,5 +25,13 @@
 </table>
 
 <br />
+
+<div class="viewport">
+  <div class="flipsnap">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</div>
 
 <%= link_to 'New Schedule', new_schedule_path %>
