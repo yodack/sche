@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  attr_accessible :board, :name
+  attr_accessible :board_id, :name
 end

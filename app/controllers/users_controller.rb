@@ -42,9 +42,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
 
+    #TODO Scheduleの空データを作成しておく
+    Schedule.new(user_id: @user.id, board_when_id: 1, free: true) 
+    Schedule.new(user_id: @user.id, board_when_id: 2, free: true) 
+    Schedule.new(user_id: @user.id, board_when_id: 3, free: true) 
+
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to schedules_path, notice: 'Please input your schedule.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
