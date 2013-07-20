@@ -1,5 +1,9 @@
 <%- content_for :body_id, 'schedules-index' -%>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
+<!--
 <h1>Listing schedules</h1>
 
 <table>
@@ -24,13 +28,41 @@
 <% end %>
 </table>
 
+-->
+
 <br />
 
-<div class="viewport">
-  <div class="flipsnap">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
+<div id="">
+  <div class="viewport">
+    <div class="flipsnap">
+      <div class="item">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>11/11(Wed)</legend>
+          <input type="radio" name="radio-choice-1" id="radio-choice-1busy" value="off" >
+          <label for="radio-choice-1busy">Busy</label>
+          <input type="radio" name="radio-choice-1" id="radio-choice-1free" value="on" checked="checked">
+          <label for="radio-choice-1free">Free</label>
+        </fieldset>
+      </div>
+      <div class="item">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>11/12(Thu)</legend>
+          <input type="radio" name="radio-choice-2" id="radio-choice-2busy" value="off">
+          <label for="radio-choice-2busy">Busy</label>
+          <input type="radio" name="radio-choice-2" id="radio-choice-2free" value="on" checked="checked">
+          <label for="radio-choice-2free">Free</label>
+        </fieldset>
+      </div>
+      <div class="item">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>11/13(Fri)</legend>
+          <input type="radio" name="radio-choice-3" id="radio-choice-3busy" value="off">
+          <label for="radio-choice-3busy">Busy</label>
+          <input type="radio" name="radio-choice-3" id="radio-choice-3free" value="on" checked="checked">
+          <label for="radio-choice-3free">Free</label>
+        </fieldset>
+      </div>
+    </div>
   </div>
 </div>
 
