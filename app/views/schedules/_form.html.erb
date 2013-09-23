@@ -1,10 +1,10 @@
-<%= form_for(@schedule) do |f| %>
-  <% if @schedule.errors.any? %>
+<%= form_for @schedules, url: {action: 'create', user_id: @user.id} do |f| %>
+  <% if @schedules.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@schedule.errors.count, "error") %> prohibited this schedule from being saved:</h2>
+      <h2><%= pluralize(@schedules.errors.count, "error") %> prohibited this schedule from being saved:</h2>
 
       <ul>
-      <% @schedule.errors.full_messages.each do |msg| %>
+      <% @schedules.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

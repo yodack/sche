@@ -1,17 +1,15 @@
 Sche::Application.routes.draw do
-  resources :schedules
 
+  resources :boards, shallow: true  do
+    resources :users do
+      resources :schedules
+    end
 
-  resources :users
-
+    resources :board_whens
+  end
 
   resources :calendars
 
-
-  resources :board_whens
-
-
-  resources :boards
 
 
   # The priority is based upon order of creation:

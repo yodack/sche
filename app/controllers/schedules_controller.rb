@@ -24,7 +24,10 @@ class SchedulesController < ApplicationController
   # GET /schedules/new
   # GET /schedules/new.json
   def new
-    @schedule = Schedule.new
+    @user = User.find(params[:user_id])
+    @schedules = @user.schedules.build
+    p @user
+    p @schedules
 
     respond_to do |format|
       format.html # new.html.erb

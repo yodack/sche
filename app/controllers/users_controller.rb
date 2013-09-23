@@ -24,7 +24,8 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
-    @user = User.new
+    @board = Board.find(params[:board_id])
+    @user = @board.users.build 
 
     respond_to do |format|
       format.html # new.html.erb
@@ -49,7 +50,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to schedules_path, notice: 'Please input your schedule.' }
+        format.html { redirect_to new_user_schedule_path(@user), notice: 'Please input your schedule.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
