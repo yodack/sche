@@ -25,5 +25,6 @@ end
 
 group :development do
   gem 'thin'
+  gem 'tapp'
 end
 
