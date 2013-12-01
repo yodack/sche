@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.find_all_by_board_id(params[:board_id])
+    @board_summary = BoardWhen.board_summary(params[:board_id])
 
     respond_to do |format|
       format.html # index.html.erb
